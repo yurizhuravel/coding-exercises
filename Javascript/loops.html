@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <title>Yuri's Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    
+    <style>
+    	
+    	/* margin:0 auto makes the element centered, but you have to define width */
+    	#container {
+    		margin:0 auto;
+    		width:400px;
+    	}
+    	
+    	#fingersUp {
+    		width:30px;
+    		margin-left:60px;
+    	}
+    
+    </style>
+        
+</head>
+
+<body>
+	
+	<div id="container">
+	
+		<p id="arrayString"></p>
+	
+		
+	</div>
+	
+	<script type="text/javascript">
+	
+		var arrayString="";
+		
+		var myArray=["pizza", "pasta", "steak"];
+		
+		var i=0;
+		
+		/* i is a standard counter variable. ++ means it will increase by 1 */
+		
+		while (i<myArray.length) {
+		
+			arrayString=arrayString+myArray[i]+", ";
+			
+			i+1;
+		
+		}
+		
+		document.getElementById("arrayString").innerHTML=arrayString;
+	
+	</script>
+			
+</body>
+</html>

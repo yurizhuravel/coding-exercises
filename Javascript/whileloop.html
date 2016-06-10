@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <title>Yuri's Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    
+    <style>
+    	
+    	/* margin:0 auto makes the element centered, but you have to define width */
+    	#container {
+    		margin:0 auto;
+    		width:400px;
+    	}
+    	
+    	#myNumber {
+    		width:30px;
+    		margin-left:60px;
+    	}
+    
+    </style>
+        
+</head>
+
+<body>
+	
+	<div id="container">
+	
+		<p>How many fingers are you holding up?</p>
+		
+		<input id="myNumber" />
+		
+		<button id="guess">Guess!</button>
+	
+		
+	</div>
+	
+	<script type="text/javascript">
+	
+		document.getElementById("guess").onclick=function () {
+				
+				if (document.getElementById("myNumber").value>5) {
+				
+				alert("Please enter a number between 0 and 5");
+				
+				} else {
+				
+					var gotit=false; var guesses=1; var x;
+					
+					while (gotit==false) {
+			
+					x = Math.random();
+			
+					x=x*6;
+					
+					var x = Math.floor(x);
+			
+					if (x==document.getElementById("myNumber").value) {
+			
+						gotit=true;
+													
+					} else {
+			
+						guesses++;
+								
+					}
+					
+				}
+				
+			}
+			
+			alert("It was "+x+". It took me "+guesses+" guesses")
+			
+		}
+	
+	</script>
+			
+</body>
+</html>

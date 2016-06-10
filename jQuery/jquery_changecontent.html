@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <title>Yuri's jQuery</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    
+    <style>
+    
+    	#redCircle {
+    		width:150px;
+    		height:150px;
+    		background-color:red;
+    		border-radius:76px;
+    		margin:20px;
+    	}
+    
+    </style>
+        
+</head>
+
+<body>
+		
+	<div id="redCircle"></div>
+	
+	<p>A line of text</p>
+	
+	<iframe src="http://www.cnn.com"></iframe>
+	
+	<script>
+				
+		$("#redCircle").hover(function() {
+			
+			//Changes the html of all p tags//
+			$("p").html("New text");
+			
+			//Changes the src attribute of all iframes//
+			$("iframe").attr("src", "http://news.bbc.co.uk");
+			
+		});
+	
+	</script>
+			
+</body>
+</html>

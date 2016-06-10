@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <title>Yuri's Regular Expressions</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    
+    <style>
+    
+    	.greenSquare {
+    		width:250px;
+    		height:250px;
+    		background-color:green;
+    		margin:20px;    	
+    	}
+    	
+    	#redCircle {
+    		width:150px;
+    		height:150px;
+    		background-color:red;
+    		border-radius:76px;
+    		margin:20px;
+    	}
+    
+    </style>
+        
+</head>
+
+<body>
+	
+	<script>
+			
+		/*A regular expression is defined in slashes.
+		 Checking whether there is a regex value (e) within the string
+		 Useful to check whether there are numbers or capitals in a password*/
+		
+		//i makes the search case-insensitive, g makes global (multiple instances)//
+		var regex = /e/g;
+		
+		var string = "Regex is great!";
+		
+		var result = string.match(regex);
+		
+		alert(result);
+		
+	</script>
+			
+</body>
+</html>

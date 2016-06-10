@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <title>Yuri's Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    
+    <style>
+    
+    	.boxDiv {
+    		color:grey;
+    		max-width:500px;
+    		padding:20px;
+    		border:1px solid grey;
+    		border-radius:1em;
+    		text-align:centered;
+    		margin:10px 0 10px 0;
+    	}
+    	
+    	
+    </style>  
+     
+</head>
+
+<body>
+	
+	<button id="textChanger">Change the first div style</button>
+	
+	<div id="firstDiv" class="boxDiv">This is some text</div>
+	
+	<button id="textAppender">Append the second div text</button>
+	
+	<div id="secondDiv" class="boxDiv">This is...</div>
+	
+	<button id="textCreator">Create the third div text</button>
+	
+	<div id="emptyDiv" class="boxDiv"></div>
+	
+	<script type="text/javascript">
+	
+		// This is a comment
+		
+		/*
+		A multi-line
+		comment
+		*/
+		
+		var divId="firstDiv";
+		
+		document.getElementById("textChanger").onclick=function() {
+		
+			document.getElementById(divId).style.display="none";
+		
+		
+		}
+		
+		document.getElementById("textAppender").onclick=function() {
+		
+						document.getElementById("secondDiv").innerHTML=document.getElementById("secondDiv").innerHTML + "<p><strong>great</strong></p>";
+		
+		}
+		
+		document.getElementById("textCreator").onclick=function() {
+		
+			document.getElementById("emptyDiv").innerHTML="<ol><li>Red</li><li>Green</li><li>Blue</li></ol>";
+		
+		}
+	
+	</script>
+			
+</body>
+</html>

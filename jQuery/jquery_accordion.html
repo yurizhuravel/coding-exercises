@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    <title>Yuri's jQuery accordion</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    
+    
+</head>
+
+	<style>
+	
+		#square {
+			width:200px;
+			height:200px;
+			background-color:blue;
+			
+		}
+		
+		#square p {
+			color:white;
+			font-size:1.2em;
+			padding:20px;
+		}
+		
+		#target {
+			width:400px;
+			height:400px;
+			background-color:grey;
+			margin-top:10px;
+		}
+		
+		#resizeable p {
+			color:white;
+			padding:80px 0 0 35px;
+			font-size:1.2em;
+		}
+		
+		ul {
+			font-size:2em;
+		}
+	
+	</style>
+
+<body>
+	
+	<div id="accordion">
+	
+	<h3>Title</h3>
+	
+	<div>
+	
+		<p>Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. </p>
+		
+	
+	</div>
+	
+	<h3>Title</h3>
+	
+	<div>
+	
+		<p>Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. </p>
+		
+	
+	</div><h3>Title</h3>
+	
+	<div>
+	
+		<p>Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. </p>
+		
+	
+	</div><h3>Title</h3>
+	
+	<div>
+	
+		<p>Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. Some text. Some more text. </p>
+		
+	
+	</div>
+		
+	</div>
+	
+	<ul>
+		<li>One</li>
+		<li>Two</li>
+		<li>Three</li>
+		<li>Four</li>
+	</ul>
+	
+	<script>
+		
+		$("#accordion").accordion();	
+	
+		$("ul").sortable();
+		
+	</script>
+			
+</body>
+</html>

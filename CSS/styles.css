@@ -1,0 +1,307 @@
+		body {
+    		margin:0;
+    		font-family:Arial, Helmet, Freesans, sans-serif;
+    	}
+    	
+    	#topbar {
+    		background-color:rgba(30,0,0,0.3);
+    		color:white;
+    		width:100%;
+    		height:40px;
+      		z-index:1;
+    		position:relative;
+    		top:-132px;    			
+      	}
+      	
+      	.fixedwidth {
+      		width:994px;
+      		margin:0 auto;
+      		
+      	}
+      	
+      	#logodiv {
+      		padding-top:6px;
+      		padding-bottom:2px;      		
+      		margin-left:15px;
+      		float:left;
+      		border-right:1px solid #990000;
+      		padding-right:8px;
+      	}
+      	
+      	#signindiv {
+      		font-weight:bold;
+      		padding:6px 75px 13px 20px;
+       		font-size:0.8em;
+       		float:left;
+       		border-right:1px solid #990000;
+    		
+      	}
+      	
+      	#signindiv img {
+      		position:relative;
+      		top:5px;
+      	}
+      	
+      	#topmenudiv {
+      		float:left;
+      	}
+      	
+      	#topmenudiv ul {
+      		margin:0;
+      		padding:0;
+      	}
+      	
+      	#topmenudiv li {
+      		list-style:none;
+      		font-weight:bold;
+      		font-size:0.8em;
+      		border-right:1px solid #990000;
+      		padding:11px 16px 14px 16px;
+      		height:100%;
+      		float:left;
+      	}
+      	
+      	#searchdiv {
+      		float:left;
+      		padding:7px 0 0 8px;
+      	}
+      	
+      	#searchdiv input {
+      		height:23px;
+      		width:200px;
+      		border:none;
+      		padding:0 0 0 10px;
+      		font-size:0.8em;
+      		background-image:url("images/magnifying_glass.png");
+      		background-repeat:no-repeat;
+      		background-position:right center;
+      	}
+      	
+      	.break {
+      		clear:both;
+      	}
+      	
+      	#newsbar {
+      		color:white;
+    		width:100%;
+    		height:80px;
+      		z-index:2;
+      		position:relative;
+    		top:-132px;    			
+      	}
+      	
+      	#newsbar p {
+      		padding:0;
+      		margin:0;
+      		padding-top:5px;
+      		padding-left:14px;
+      		float:left;
+      		font-size:2.9em;
+      	}
+      	      	      	
+      	#uk {
+      		font-size:0.7em;
+      		padding-left:15px;
+      	}
+      	
+      	#rss {
+      		float:right;
+      		padding-top:36px;
+      		padding-right:20px;
+      	}
+      	
+      	#rssword {
+      		font-size:0.9em;
+    	}
+    	
+    	#rss img {
+    		height:12px;
+    	}
+    	
+    	#lowermenudiv {
+    		padding-top:4px;
+    		padding-left:10px;
+    		margin-right:5px;
+    	}
+    	
+    	#lowermenudiv ul {
+    		margin:0;
+    		padding:5px 0 0 5px;
+      		background-color:#3E0C0D;
+    		height:20px;
+    	}
+    	
+    	#lowermenudiv li {
+    		list-style-type:none;
+      		font-weight:normal;
+    		font-size:0.75em;
+    		float:left;
+    		padding:0 8px 0 8px;
+    		border-right:1px solid #990000;
+    	}
+    	
+    	.selected {
+    		background-color:#EDEDED;
+    		color:#545454;
+    		height:19px;
+    		position:relative;
+    		top:-5px;
+    		padding-top:6px !important;
+    	}
+    	
+    	#red_masthead {
+    		padding:0;
+    		margin:0 auto;
+    		width:994px;
+    		position:relative;
+    		left:-400px;
+    	}
+    	
+    	
+    	#content {
+      		color:#505050;
+    		width:100%;
+    		height:80px;
+    		margin:0;
+    		padding:6px 0 0 11px;
+    		position:relative;
+    		top:-132px;
+    		font-size:0.8em;
+    		float:left;
+      		  			
+      	}
+      	
+      	#content p {
+      		margin:0 0 6px 0;
+      		
+      	}
+      	
+      	.date {
+      		font-weight:bold;
+      	}
+      	
+      	#content h1 {
+      		margin:0;
+      		padding:5px 0 10px 0;
+      		font-size:2.35em;
+      		color:#1F4F82;
+      	}
+      	
+      	.headlineimage {
+      		float:left;
+      	}
+      	
+      	.teaser {
+      		width:230px;
+      		position:relative;
+      		left:14px;
+      		top:-3px;
+      		float:left;
+      		font-size:1em;
+      	}	
+          	
+      	a {
+      		text-decoration:none;
+      	}
+      	
+      	
+      	.teaser a {
+      		color:rgb(92, 127, 164);
+      		text-decoration:none;
+      	}
+      	
+      	a:hover {
+      		text-decoration:underline;
+      	}
+      	
+      	.video {
+      		background-image:url("images/play.png");
+      		background-repeat:no-repeat;
+      		background-position:left center;     
+      		padding-left:21px;
+      	}
+      	
+      	.links {
+      		line-height:1.6em;
+      	}
+      	
+      	.audio {
+      		background-image:url("images/audio.png");
+      		background-repeat:no-repeat;
+      		background-position:left center;
+      		padding-left:21px;
+    	}
+    	
+    	#watchlisten {
+    		background-color:#EEEEEE;
+    		position:relative;
+    		top:-62px;
+    		right:16px;
+    		width:337px;
+    		float:right;
+    		
+    	}
+    	
+    	h2 {
+    		margin:0;
+    		color:#505050;
+    		font-size:1.8em;
+    		padding:7px;
+    	}
+    		     	
+   		.wlblock {
+   			float:left;
+   			border-right:1px solid white;
+   			background-color:#D1700E;
+   			width:143px;
+   			
+   		}
+   		
+   		.wlblock a {
+   			color:#EEEEEE;	
+   		}
+   		
+   		.wlblock p {
+   			margin:0;
+   			padding:3px 0 10px 8px;
+   		}
+   		
+   		#wlblocklast {
+   			float:left;
+   			background-color:#D1700E;
+   			width:48px;
+   		}
+   		
+   		#wlblocklast a {
+   			color:#EEEEEE;	
+   		}
+   		
+   		#wlblocklast p {
+   			margin:0;
+   			padding:3px 0 16px 8px;
+   		}
+   	
+   		#watchlisten ul {
+   			padding-right:10px;
+   			padding-left:10px;
+   			padding-top:5px;
+   			margin:0;	
+   		}
+   		
+   		#watchlisten li {
+   			list-style:none;
+   			background-image:url("images/live.png");
+      		background-repeat:no-repeat;
+      		background-position:left center;
+      		padding:6px 0 6px 34px; 
+      		
+   		}
+   		
+   		#watchlisten ul a {
+   			color:#2C5989;
+   			font-weight:bold;
+   		}
+   		
+   		.bottomborder {
+   			border-bottom:1px solid #DDDDDD; 
+   		}

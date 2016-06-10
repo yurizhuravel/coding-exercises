@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <title>Yuri's Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    
+    <style>
+    
+    	.boxDiv {
+    		color:grey;
+    		max-width:500px;
+    		padding:20px;
+    		border:1px solid grey;
+    		border-radius:1em;
+    		text-align:centered;
+    		margin:10px 0 10px 0;
+    	}
+    	
+    	
+    </style>  
+     
+</head>
+
+<body>
+	
+	
+	<button id="textChanger">Change the text</button>
+	
+	<div id="firstDiv" class="boxDiv">This is some text</div>
+	
+	
+	
+	
+	<script type="text/javascript">
+	
+		
+		var myArray = new Array ();
+		
+		myArray[0]="pizza";
+		myArray[1]="pasta";
+		
+		console.log(myArray);
+		
+		myOtherArray=["rain","sunshine","fog"];
+		
+		myOtherArray.push("snow");
+		
+		myOtherArray.splice(2, 0, "hail", "drizzle");
+		
+		console.log(myOtherArray.length);
+		
+		document.getElementById("textChanger").onclick=function() {
+			
+			document.getElementById("firstDiv").innerHTML=myOtherArray[1];
+				
+		}
+		
+		
+	
+	</script>
+			
+</body>
+</html>

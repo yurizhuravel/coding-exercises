@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+    <title>Yuri's CodePlayer</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+
+</head>
+
+	<style>
+
+		body {
+			/*these two needed to get rid of the margins around page*/
+			margin:0;
+			padding:0;
+			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+   			font-weight:300;
+		}
+
+		#topbar {
+			width:100%;
+			height:50px;
+			background-color:#EEEEEE;
+			border-bottom:2px solid grey;
+			margin:0;
+		}
+
+		#logo {
+			float:left;
+			padding:12px 0 0 20px;
+			font-weight:bold;
+			font-size:1.3em;
+		}
+
+		#selector	{
+			list-style:none;
+			width:237px;
+			/*you can do this with an element no only div*/
+			margin:0 auto;
+			padding:0;
+			border:1px solid grey;
+			border-radius:4px;
+			height:33px;
+			position:relative;
+			top:7px;
+			font-size:1.2em;
+		}
+
+		#selector li {
+			float:left;
+			border-right:1px solid grey;
+			box-sizing:border-box;
+			padding:5px 9px;
+			margin:0;
+		}
+
+		#buttonDiv {
+			float:right;
+			padding:8px 20px 0 0;
+		}
+
+		#runButton {
+			font-size:1.3em;
+			border-radius:5px;
+		}
+
+		.break {
+			clear:both;
+		}
+
+		.codeContainer {
+			width:50%;
+			height:100%;
+			float:left;
+			/*needed to get the div within this div to flow properly*/
+			position:relative;
+		}
+
+		.codeContainer textarea {
+			width:100%;
+			height:100%;
+			border-right:1px solid grey;
+			font-family:courier;
+			font-size:0.9em;
+			padding:25px 5px;
+
+		}
+
+		.codeLabel {
+			position:absolute;
+			right:10px;
+			top:5px;
+			color:green;
+		}
+
+		#CSSDiv, #JSDiv {
+			display:none;
+		}
+
+		iframe {
+			height:100%;
+			width:90%;
+			position:relative;
+			left:18px;
+			padding:25px 5px;
+			border:none;
+		}
+
+		.selected {
+			background-color:grey;
+		}
+
+
+	</style>
+
+<body>
+
+	<div id="container">
+
+		<div id="topbar">
+
+			<div id="logo">
+
+				CodePlayer
+
+			</div>
+
+			<div id="buttonDiv">
+
+				<button id="runButton">Run</button>
+
+			</div>
+
+				<ul id="selector">
+
+					<!-- we need two classes here because one of them can be toggled -->
+					<li class="selectable selected">HTML</li>
+					<li class="selectable">CSS</li>
+					<li class="selectable">JS</li>
+					<li class="selectable selected" style="border:none">Result</li>
+				</ul>
+
+		</div>
+
+		<div class="break"></div>
+
+		<div class="codeContainer" id="HTMLDiv">
+
+			<div class="codeLabel">HTML</div>
+
+			<textarea id="htmlCode"><div id="test">Example</div></textarea>
+
+		</div>
+
+		<div class="codeContainer" id="CSSDiv">
+
+			<div class="codeLabel">CSS</div>
+
+			<textarea id="cssCode">html {color:red}</textarea>
+
+		</div>
+
+		<div class="codeContainer" id="JSDiv">
+
+			<div class="codeLabel">JS</div>
+
+			<textarea id="jsCode">document.getElementById("test").innerHTML="Done!";</textarea>
+
+		</div>
+
+		<div class="codeContainer" id="ResultDiv">
+
+			<div class="codeLabel">Result</div>
+
+			<iframe id="resultFrame"></iframe>
+
+		</div>
+
+	</div>
+
+	<script>
+
+		//defining the container height as window height-topbar height//
+		var windowHeight=$(window).height();
+
+		var menuBarHeight=$("#topbar").height();
+
+		var codeContainerHeight=windowHeight-menuBarHeight;
+
+		$(".codeContainer").height(codeContainerHeight+"px");
+
+		$(".selectable").click(function() {
+
+			//toggles the class on or off//
+			$(this).toggleClass("selected");
+
+			/*we can do it like that because html content of the li
+			is good for that in this case - short and clear*/
+			var activeDiv=$(this).html();
+
+			$("#"+activeDiv+"Div").toggle();
+
+			//returns true if the div is not visible and...//
+			var visibleDivs=$(".codeContainer").filter(function() {
+
+				return($(this).css("display")!="none");
+
+			//...counts visible divs number//
+			}).length;
+
+			var width=100/visibleDivs;
+
+			$(".codeContainer").css("width", width+"%");
+
+		});
+
+		$("#runButton").click(function() {
+
+			//addresses the html of the iframe and changes it to #htmlCode content, then adds the css within a style tag//
+			$("iframe").contents().find("html").html('<style>'+$("#cssCode").val()+'</style>'+$("#htmlCode").val());
+
+			document.getElementById("resultFrame").contentWindow.eval($("#jsCode").val());
+
+		});
+
+
+
+	</script>
+
+</body>
+</html>

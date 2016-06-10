@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <title>Yuri's Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    
+    <style>
+    	
+    	/* margin:0 auto makes the element centered, but you have to define width */
+    	#container {
+    		margin:0 auto;
+    		width:400px;
+    	}
+    	
+    	#fingersUp {
+    		width:30px;
+    		margin-left:60px;
+    	}
+    
+    </style>
+        
+</head>
+
+<body>
+	
+	<div id="container">
+	
+		<p>How many fingers am I holding up?</p>
+	
+		<input id="fingersUp" />
+	
+		<button id="myButton">Let's see!</button>
+		
+	</div>
+	
+	<script type="text/javascript">
+	
+		//This is a random number generator//
+		var x=Math.random();
+				
+		x=x*6;
+		
+		/*This rounds x down to the nearest whole number
+		 so we need to multiply by 6 above if we want to get whole 5 */
+		x=Math.floor(x);
+		
+		
+		/* At the moment the code allows to keep guessing until the correct answer is given. To randomize at every click, the above generator should be placed inside the onclick function below*/
+		
+		document.getElementById("myButton").onclick = function () {
+		
+			if (document.getElementById("fingersUp").value == x) {
+			
+			alert("Correct!");
+			
+			} else {
+			
+			alert("Try again! My number was " +x); }
+		}
+		
+	
+	</script>
+			
+</body>
+</html>

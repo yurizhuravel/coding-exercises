@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <title>Yuri's jQuery</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    
+    <style>
+    
+    	.greenSquare {
+    		width:250px;
+    		height:250px;
+    		background-color:green;
+    		margin:20px;    	
+    	}
+    	
+    	#redCircle {
+    		width:150px;
+    		height:150px;
+    		background-color:red;
+    		border-radius:76px;
+    		margin:20px;
+    	}
+    
+    </style>
+        
+</head>
+
+<body>
+	
+	<div class="greenSquare"></div>
+		
+	<div id="redCircle"></div>
+	
+	<div class="greenSquare"></div>
+	
+	<script>
+	
+		//Changes the css attributes on hover, even if they were not defined in css//
+			
+		$("div").hover(function() {
+			
+			$(this).css("width", "100px");
+		
+		});
+		
+		//The class of .greenSquare disappears when clicked//
+			
+		$(".greenSquare").click(function() {
+		
+			$(this).hide();
+			
+		});
+		
+		//Green squares fade out when the red circle is clicked//
+		
+		$("#redCircle").click(function() {
+		
+			$(".greenSquare").fadeOut();
+		
+		});
+		
+	
+	</script>
+			
+</body>
+</html>
