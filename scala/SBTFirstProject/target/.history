@@ -1,0 +1,1 @@
+;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers" ;*/*:dumpStructureTo /private/var/folders/hx/j07x3lp1517gc11dcplp3dxr0000gn/T/sbt-structure.xml
